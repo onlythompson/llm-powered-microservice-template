@@ -1,0 +1,40 @@
+my_fastapi_microservice/
+├── src/
+│   ├── application/
+│   │   ├── prompt_management/
+│   │   │   ├── __init__.py
+│   │   │   ├── prompt_template.py
+│   │   │   └── prompt_repository.py
+│   │   ├── services/
+│   │   │   ├── llm_orchestrator.py
+│   │   │   └── usage_tracker.py
+│   ├── domain/
+│   │   ├── llm_request.py
+│   │   └── llm_response.py
+│   ├── infrastructure/
+│   │   ├── llm_providers/
+│   │   │   ├── __init__.py
+│   │   │   ├── base.py
+│   │   │   ├── openai.py
+│   │   │   └── anthropic.py
+│   │   └── cache/
+│   │       └── redis.py
+│   ├── presentation/
+│   │   └── api/
+│   │       ├── routes/
+│   │       │   └── llm_routes.py
+│   │       └── schemas/
+│   │           ├── llm_request.py
+│   │           └── llm_response.py
+│   └── core/
+│       ├── exceptions.py  (updated)
+│       └── config.py  (updated)
+├── tests/
+│   └── llm/
+│       ├── test_prompt_management.py
+│       └── test_llm_orchestrator.py
+├── docs/
+│   ├── api.md  (updated)
+│   └── llm_integration.md
+└── k8s/
+    └── llm_deployment.yaml
